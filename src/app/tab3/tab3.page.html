@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Magic
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4><ion-icon name="flash"></ion-icon> {{isOn ? 'On' : 'Off'}}</h4><button ion-button block primary (click)="toggleFlash()">Light {{isOn ? 'On' : 'Off'}} </button><br/>
+  <br/>
+  <ion-button color="primary" (click)="takePhoto()">
+    <ion-icon range-right name="photos"></ion-icon>
+  </ion-button>
+  <img *ngIf="image" src={{image}} />
+</ion-content>

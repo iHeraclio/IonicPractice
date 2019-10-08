@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Studios Ghibli movies
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-card ion-item class="welcome-card" *ngFor="let movie of movies">
+      <ion-card-header>
+        <ion-card-title>{{movie.title}}</ion-card-title>
+        <ion-card-subtitle>Director: {{movie.director}}</ion-card-subtitle>
+        <ion-card-subtitle>Producer: {{movie.producer}}</ion-card-subtitle>
+        <ion-card-subtitle>Release Date: {{movie.release_date}}</ion-card-subtitle>
+        <ion-card-subtitle>RT Score: {{movie.rt_score}}</ion-card-subtitle>
+        <ion-chip routerLink="/show-movie/{{movie.id}}" routerDirection="forward">
+          <ion-icon name="film"></ion-icon>
+          <ion-label>Description</ion-label>
+        </ion-chip>
+      </ion-card-header>
+    </ion-card>
+  </ion-list>
+</ion-content>
